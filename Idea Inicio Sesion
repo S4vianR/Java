@@ -1,0 +1,21 @@
+Idea de inicio de sesion en java
+static public boolean inicioSesion() {
+        String username = null;
+        boolean validacion;
+        int noErrores = 0;
+        Scanner usuario = new Scanner(System.in);
+        System.out.println("Bienvido\nUsuario:");
+        username = usuario.next();
+        do {
+            if (username == e1.getNombre() || username == sis1.getNombre() || username == sis2.getNombre()
+                    || username == r1.getNombre() || username == r2.getNombre() || username == a1.getNombre()
+                    || username == a2.getNombre() || username == a3.getNombre()) {
+                validacion = true;
+            } else {
+                System.out.println("Error");
+                validacion = false;
+            }
+        } while (noErrores == 3);
+        return validacion;
+
+    }

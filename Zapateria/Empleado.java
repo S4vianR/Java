@@ -6,17 +6,29 @@ public class Empleado {
     // Atributos
     protected String nombre;
     protected long numEmpleado;
-    protected float sueldo;
+    protected double sueldo;
 
+    //Constructor vacio
     public Empleado() {
     }
 
-    public Empleado(String nombre, long numEmpleado, float sueldo) {
+    //Constructor normal
+    public Empleado(String nombre, long numEmpleado, double sueldo) {
         this.nombre = nombre;
         this.numEmpleado = numEmpleado;
         this.sueldo = sueldo;
     }
 
+    //Metodos
+    public String pago(){
+        double pago = 2000.00;
+        double bono = 0.00;
+        double pagoT = pago + bono;
+        this.setSueldo(pagoT);
+        return "\nSe le ha pagado al empleado: " + this.getSueldo();
+    }
+
+    //Getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -30,26 +42,21 @@ public class Empleado {
     }
 
     public void setNumEmpleado(long numEmpleado) {
-        do{
-            if (numEmpleado<0){
-            System.out.println("Numero de empleado no valido, porfavor escriba otro: ");
-            numEmpleado = s1.nextLong();
-            }
-        } while (numEmpleado>0);
         this.numEmpleado = numEmpleado;
     }
 
-    public float getSueldo() {
+    public double getSueldo() {
         return sueldo;
     }
 
-    public void setSueldo(float sueldo) {
+    public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
 
+    //toString
     @Override
     public String toString() {
-        return "Empleado [numEmpleado=" + numEmpleado + ", sueldo=" + sueldo + "]";
+        return "\nNumEmpleado: " + numEmpleado + "\nSueldo:" + sueldo;
     }
 
 }
