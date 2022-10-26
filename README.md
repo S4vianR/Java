@@ -1,2 +1,3 @@
 # Java
-Este es un codigo que asimila al sistema de membresias de la compañia cinepolis
+Este es un conjunto de codigos que asimila a distintos negocios.
+Para uso educativo solamente.
