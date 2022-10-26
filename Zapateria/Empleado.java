@@ -2,7 +2,7 @@ import java.util.Scanner;;
 
 public class Empleado {
     // Scanner
-    Scanner s1 = new Scanner (System.in)
+    Scanner s1 = new Scanner (System.in);
     // Atributos
     protected String nombre;
     protected long numEmpleado;
