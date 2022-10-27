@@ -16,12 +16,8 @@ public class Empleado {
     }
 
     // Metodos
-    public void pago() {
-        double pago = 2000.00;
-        double bono = 0.00;
-        double pagoT = pago + bono;
-        this.setSueldo(pagoT);
-        System.out.println("\nSe le ha pagado al empleado: " + this.getSueldo());
+    public double pago() {
+        return getSueldo();
     }
 
     // Getters y setters
@@ -51,7 +47,10 @@ public class Empleado {
     }
 
     public void setSueldo(double sueldo) {
-        this.sueldo = sueldo;
+        if (sueldo<1000)
+            System.out.println("Escriba un salario valido, 1000 pesos es lo minimo");
+        else
+            this.sueldo = sueldo;
     }
 
     // toString

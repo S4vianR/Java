@@ -12,15 +12,16 @@ public class Repartidor extends Empleado {
         this.ruta = ruta;
     }
 
+    public Repartidor(Repartidor mientrasRepartidor) {
+        super(mientrasRepartidor.nombre, mientrasRepartidor.numEmpleado, mientrasRepartidor.sueldo);
+        this.ruta = ruta;
+    }
+
     // Metoodo
     @Override
-    public void pago() {
-        double pago = 3000.00;
+    public double pago() {
         double bono = 1000.00;
-        double pagoT = pago + bono;
-        this.setSueldo(pagoT);
-        System.out.println("\nTendra un bono mensual de gasolina de: $" + bono + " pesos");
-        System.out.println("\nSe le ha pagado al empleado: " + this.getSueldo());
+        return bono + getSueldo();
     }
 
     // Getters y setters

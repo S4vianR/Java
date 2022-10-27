@@ -12,15 +12,16 @@ public class Actualiza extends Empleado {
         this.encargado = encargado;
     }
 
+    public Actualiza(Actualiza mientrasActualiza) {
+        super(mientrasActualiza.nombre, mientrasActualiza.numEmpleado, mientrasActualiza.sueldo);
+        this.encargado = encargado;
+    }
+
     // Metoodo
     @Override
-    public void pago() {
-        double pago = 2500.00;
+    public double pago() {
         double bono = 500.00;
-        double pagoT = pago + bono;
-        System.out.println("Tendra un bono mesual añadido a su sueldo de: $" + bono + " pesos");
-        this.setSueldo(pagoT);
-        System.out.println("\nSe le ha pagado al empleado: " + this.getSueldo());
+        return bono + getSueldo();
     }
 
     // Getters y setters
