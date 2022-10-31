@@ -14,7 +14,7 @@ public class Sistemas extends Empleado {
 
     public Sistemas(Sistemas mientraSistemas) {
         super(mientraSistemas.nombre,mientraSistemas.numEmpleado,mientraSistemas.sueldo);
-        this.puesto = puesto;
+        this.puesto = mientraSistemas.puesto;
     }
 
     // Metoodo
@@ -37,6 +37,6 @@ public class Sistemas extends Empleado {
     @Override
     public String toString() {
         return super.toString() + "\nPuesto: " + puesto;
-    }
+    }   
 
 }

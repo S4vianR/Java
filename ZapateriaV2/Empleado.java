@@ -56,7 +56,7 @@ public class Empleado {
     // toString
     @Override
     public String toString() {
-        return "\nNombre: " + nombre + "\nNumEmpleado: " + numEmpleado + "\nSueldo:" + sueldo;
+        return "\nNombre: " + nombre + "\nNumEmpleado: " + numEmpleado + "\nSueldo: " + sueldo;
     }
 
 }

@@ -14,7 +14,7 @@ public class Repartidor extends Empleado {
 
     public Repartidor(Repartidor mientrasRepartidor) {
         super(mientrasRepartidor.nombre, mientrasRepartidor.numEmpleado, mientrasRepartidor.sueldo);
-        this.ruta = ruta;
+        this.ruta = mientrasRepartidor.ruta;
     }
 
     // Metoodo

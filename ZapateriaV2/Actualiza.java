@@ -14,7 +14,7 @@ public class Actualiza extends Empleado {
 
     public Actualiza(Actualiza mientrasActualiza) {
         super(mientrasActualiza.nombre, mientrasActualiza.numEmpleado, mientrasActualiza.sueldo);
-        this.encargado = encargado;
+        this.encargado = mientrasActualiza.encargado;
     }
 
     // Metoodo
