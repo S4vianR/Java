@@ -27,6 +27,11 @@ public class MembresiaFanatico extends MembresiaFan {
             System.out.println("\nTenga su refill gratis de soda");
     }
 
+    public void precioEspecial (){
+        this.setPrecioEspecialEntrada(45.00);
+        System.out.println("El precio especial para miembros es de: " + getDescuentoComboLunes());
+    }
+
     public void descuentoComboLunes() {
         System.out.println("Usted tiene un descuento del combo lunes y serian 189 pesos");
     }
