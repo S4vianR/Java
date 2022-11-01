@@ -12,15 +12,16 @@ public class Sistemas extends Empleado {
         this.puesto = puesto;
     }
 
+    public Sistemas(Sistemas mientraSistemas) {
+        super(mientraSistemas.nombre,mientraSistemas.numEmpleado,mientraSistemas.sueldo);
+        this.puesto = mientraSistemas.puesto;
+    }
+
     // Metoodo
     @Override
-    public void pago() {
-        double pago = 4500.00;
+    public double pago() {
         double bono = 3000.00;
-        double pagoT = pago + bono;
-        System.out.println("Tendra un bono mensual de: $" + bono + " pesos por pertenecer al departamento de sistemas");
-        this.setSueldo(pagoT);
-        System.out.println("\nSe le ha pagado al empleado: " + this.getSueldo());
+        return bono + getSueldo();
     }
 
     // Getters y setters
@@ -36,6 +37,6 @@ public class Sistemas extends Empleado {
     @Override
     public String toString() {
         return super.toString() + "\nPuesto: " + puesto;
-    }
+    }   
 
 }
