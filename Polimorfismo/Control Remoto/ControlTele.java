@@ -9,7 +9,7 @@ public class ControlTele extends ControlRemoto {
     }
 
     public void cambiar() {
-        System.out.println("puedes cambiar el canal y el volmen");
+        System.out.println("Puedes cambiar el canal y el volmen");
     }
 
     public int getCanal() {
@@ -30,7 +30,7 @@ public class ControlTele extends ControlRemoto {
 
     @Override
     public String toString() {
-        return super.toString() + "ControlTele{" + "Canal=" + Canal + ", volumen=" + volumen + '}';
+        return super.toString() + "\nControlTele" + "\nCanal: " + Canal + "\nVolumen: " + volumen;
     }
 
 }

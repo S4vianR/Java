@@ -9,7 +9,7 @@ public class ControlDVD extends ControlRemoto {
     }
 
     public void cambiar() {
-        System.out.println("puedes cambiar pelicila e idioma");
+        System.out.println("Puedes cambiar pelicila e idioma");
     }
 
     public String getPelicula() {
@@ -30,7 +30,7 @@ public class ControlDVD extends ControlRemoto {
 
     @Override
     public String toString() {
-        return super.toString() + "ControlDVD{" + "Pelicula=" + Pelicula + ", Idioma=" + Idioma + '}';
+        return super.toString() + "\nControlDVD" + "\nPelicula: " + Pelicula + "\nIdioma: " + Idioma;
     }
 
 }

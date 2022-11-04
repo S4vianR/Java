@@ -37,7 +37,7 @@ public abstract class ControlRemoto {
 
     @Override
     public String toString() {
-        return "ControlRemoto{" + "color=" + color + ", marca=" + marca + ", modelo=" + modelo + '}';
+        return "\nControl Remoto" + "\nColor: " + color + "\nMarca: " + marca + "\nModelo: " + modelo;
     }
 
 }
