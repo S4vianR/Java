@@ -13,9 +13,11 @@ public class appTienda {
         for (Articulo art : articulos) {
             System.out.println(art);
             if (art instanceof Celular) {
-                System.out.println("Precio de venta original es de: " + ((Celular) art).getPrecio() + "\nPrecio de venta total sumando impuestos: " + ((Celular) art).ventas());
+                System.out.println("Precio de venta original es de: " + ((Celular) art).getPrecio()
+                        + "\nPrecio de venta total sumando impuestos: " + ((Celular) art).ventas());
             } else if (art instanceof Accesorio) {
-                System.out.println("Precio de venta original es de: " + ((Accesorio) art).getPrecio() + "\nPrecio de venta total sumando impuestos: " + ((Accesorio) art).ventas());
+                System.out.println("Precio de venta original es de: " + ((Accesorio) art).getPrecio()
+                        + "\nPrecio de venta total sumando impuestos: " + ((Accesorio) art).ventas());
             }
         }
     }
