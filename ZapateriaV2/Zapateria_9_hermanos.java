@@ -7,15 +7,13 @@ public class Zapateria_9_hermanos {
     static Scanner pNombres = new Scanner(System.in);
     static Scanner pString = new Scanner(System.in);
     static int op = 0;
-    static char opC;;
+    static char opC;
     static double sueldo = 0.00;
     static long numEmpleado = 0;
     static String nombreEmpleado, puesto, ruta, encargado;
 
     public static void main(String[] args) {
-
-        // Limpiar consola
-        System.out.print("\033[H\033[2J");
+        limpiarConsola();
         do {
             System.out.println(
                     "\nBienvenido\n1.Registro de empleado de sistemas\n2.Registro de empleado repartidor\n3.Registro de encargados de la zapateria\n4.Listar empleados registrados\n5.Pagar quincena a todos\n6.Salir");
@@ -54,8 +52,7 @@ public class Zapateria_9_hermanos {
     }
 
     static public void registroS() {
-        // Limpiar consola
-        System.out.print("\033[H\033[2J");
+        limpiarConsola();
         do {
             System.out.println("Cual es el nombre del empleado:");
             nombreEmpleado = pNombres.nextLine();
@@ -77,8 +74,7 @@ public class Zapateria_9_hermanos {
     }
 
     static public void registroR() {
-        // Limpiar consola
-        System.out.print("\033[H\033[2J");
+        limpiarConsola();
         do {
             System.out.println("Cual es el nombre del empleado:");
             nombreEmpleado = pNombres.nextLine();
@@ -100,8 +96,7 @@ public class Zapateria_9_hermanos {
     }
 
     static public void registroE() {
-        // Limpiar consola
-        System.out.print("\033[H\033[2J");
+        limpiarConsola();
         do {
             System.out.println("Cual es el nombre del empleado:");
             nombreEmpleado = pNombres.nextLine();
@@ -123,8 +118,7 @@ public class Zapateria_9_hermanos {
     }
 
     static public void pago() {
-        // Limpiar consola
-        System.out.print("\033[H\033[2J");
+        limpiarConsola();
 
         System.out.println("Pago de quincena a todos:");
         // Pago a todos
@@ -135,12 +129,14 @@ public class Zapateria_9_hermanos {
     }
 
     static public void listar() {
-        // Limpiar consola
-        System.out.print("\033[H\033[2J");
+        limpiarConsola();
 
         for (Empleado b : empleados) {
             System.out.println(b);
         }
+    }
 
+    public static void limpiarConsola() {
+        System.out.print("\033[H\033[2J");
     }
 }
