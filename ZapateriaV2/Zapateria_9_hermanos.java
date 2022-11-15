@@ -16,26 +16,20 @@ public class Zapateria_9_hermanos {
         do {
             System.out.println(
                     "\nBienvenido\n"
-                        + "1.Registro de empleado de sistemas\n"
-                        + "2.Registro de empleado repartidor\n"
-                        + "3.Registro de encargados de la zapateria\n"
-                        + "4.Listar empleados registrados\n"
-                        + "5.Pagar quincena a todos\n"
-                        + "6.Salir");
+                        + "1.Registro de empleados\n"
+                        + "2.Listar empleados registrados\n"
+                        + "3.Pagar quincena a todos\n"
+                        + "4.Salir");
             op = scannerDouble.nextInt();
             limpiarConsola();
             switch(op) {
-                case 1:
-                case 2:
-                case 3:
-                    agregarEmpleado(op);
-                    break;
-                case 4: listar(); break;
-                case 5: pago(); break;
-                case 6: System.out.println("Gracias, vuelva pronto"); break;
+                case 1: agregarEmpleado(op); break;
+                case 2: listar(); break;
+                case 3: pago(); break;
+                case 4: System.out.println("Gracias, vuelva pronto"); break;
                 default: System.out.println("Opcion no valida");
             }
-        } while (op != 6);
+        } while (op != 4);
     }
 
     private static void agregarEmpleado(int op) {
