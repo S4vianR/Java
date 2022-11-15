@@ -1,7 +1,7 @@
-public class Empleado {
+public abstract class Empleado {
     // Atributos
-    protected String nombre;
     protected long numEmpleado;
+    protected String nombre;
     protected double sueldo;
 
     // Constructor vacio
