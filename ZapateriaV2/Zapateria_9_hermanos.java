@@ -51,7 +51,7 @@ public class Zapateria_9_hermanos {
         } while (op != 6);
     }
 
-    static public void registroS() {
+    public static void registroS() {
         limpiarConsola();
         do {
             System.out.println("Cual es el nombre del empleado:");
@@ -73,7 +73,7 @@ public class Zapateria_9_hermanos {
         } while (opC == 's' || opC == 'S');
     }
 
-    static public void registroR() {
+    public static void registroR() {
         limpiarConsola();
         do {
             System.out.println("Cual es el nombre del empleado:");
@@ -95,7 +95,7 @@ public class Zapateria_9_hermanos {
         } while (opC == 's' || opC == 'S');
     }
 
-    static public void registroE() {
+    public static void registroE() {
         limpiarConsola();
         do {
             System.out.println("Cual es el nombre del empleado:");
@@ -117,7 +117,7 @@ public class Zapateria_9_hermanos {
         } while (opC == 's' || opC == 'S');
     }
 
-    static public void pago() {
+    public static void pago() {
         limpiarConsola();
 
         System.out.println("Pago de quincena a todos:");
@@ -128,7 +128,7 @@ public class Zapateria_9_hermanos {
 
     }
 
-    static public void listar() {
+    public static void listar() {
         limpiarConsola();
 
         for (Empleado b : empleados) {
