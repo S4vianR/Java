@@ -4,12 +4,8 @@ public abstract class Empleado {
     protected String nombre;
     protected double sueldo;
 
-    // Constructor vacio
-    public Empleado() {
-    }
-
     // Constructor normal
-    public Empleado(String nombre, long numEmpleado, double sueldo) {
+    protected Empleado(String nombre, long numEmpleado, double sueldo) {
         this.nombre = nombre;
         this.numEmpleado = numEmpleado;
         this.sueldo = sueldo;
@@ -34,12 +30,12 @@ public abstract class Empleado {
     }
 
     public void setNumEmpleado(long numEmpleado) {
-        if (numEmpleado < 0)
+        if (numEmpleado < 0) {
             System.out.println("Escriba un numero de empleado valido:");
-        else if (numEmpleado > 0) {
-            this.numEmpleado = 22180000 + numEmpleado;
+            return;
         }
 
+        this.numEmpleado = 22180000 + numEmpleado;
     }
 
     public double getSueldo() {
@@ -47,10 +43,12 @@ public abstract class Empleado {
     }
 
     public void setSueldo(double sueldo) {
-        if (sueldo<1000)
+        if (sueldo<1000) {
             System.out.println("Escriba un salario valido, 1000 pesos es lo minimo");
-        else
-            this.sueldo = sueldo;
+            return;
+        }
+
+        this.sueldo = sueldo;
     }
 
     // toString

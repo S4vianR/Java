@@ -2,11 +2,6 @@ public class Sistemas extends Empleado {
     // Atributos
     private String puesto;
 
-    // Constructor
-    public Sistemas() {
-        super();
-    }
-
     public Sistemas(String nombre, long numEmpleado, double sueldo, String puesto) {
         super(nombre, numEmpleado, sueldo);
         this.puesto = puesto;

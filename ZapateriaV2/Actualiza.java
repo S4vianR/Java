@@ -2,11 +2,6 @@ public class Actualiza extends Empleado {
     // Atributos
     private String encargado;
 
-    // Constructor
-    public Actualiza() {
-        super();
-    }
-
     public Actualiza(String nombre, long numEmpleado, double sueldo, String encargado) {
         super(nombre, numEmpleado, sueldo);
         this.encargado = encargado;

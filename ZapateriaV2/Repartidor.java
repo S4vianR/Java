@@ -2,11 +2,6 @@ public class Repartidor extends Empleado {
     // Atributos
     private String ruta;
 
-    // Constructor
-    public Repartidor() {
-        super();
-    }
-
     public Repartidor(String nombre, long numEmpleado, double sueldo, String ruta) {
         super(nombre, numEmpleado, sueldo);
         this.ruta = ruta;

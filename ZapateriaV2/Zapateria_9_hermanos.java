@@ -56,84 +56,69 @@ public class Zapateria_9_hermanos {
     static public void registroS() {
         // Limpiar consola
         System.out.print("\033[H\033[2J");
-        Sistemas sis = new Sistemas();
         do {
             System.out.println("Cual es el nombre del empleado:");
             nombreEmpleado = pNombres.nextLine();
-            sis.setNombre(nombreEmpleado);
             System.out.println("Puesto (Diseñador de bases de datos o Programador):");
             puesto = pString.nextLine();
-            sis.setPuesto(puesto);
             do {
                 System.out.println("Cual es el sueldo del empleado");
                 sueldo = s1.nextDouble();
-                sis.setSueldo(sueldo);
-            } while (sis.getSueldo() < 1000);
+            } while (sueldo < 1000);
             do {
                 System.out.println("Numero de empleado:");
                 numEmpleado = s1.nextLong();
-                sis.setNumEmpleado(numEmpleado);
-            } while (sis.getNumEmpleado() < 0);
+            } while (numEmpleado < 0);
+            Sistemas regSistemas = new Sistemas(nombreEmpleado, numEmpleado, sueldo, puesto);
+            empleados.add(regSistemas);
             System.out.println("\nDesea agregar a otro empleado (s/n):");
             opC = s1.next().charAt(0);
-            Sistemas regSistemas = new Sistemas(sis);
-            empleados.add(regSistemas);
         } while (opC == 's' || opC == 'S');
     }
 
     static public void registroR() {
         // Limpiar consola
         System.out.print("\033[H\033[2J");
-        Repartidor rep = new Repartidor();
         do {
             System.out.println("Cual es el nombre del empleado:");
             nombreEmpleado = pNombres.nextLine();
-            rep.setNombre(nombreEmpleado);
             System.out.println("Ruta (Zona Centro, Colonia del Real, Colonia El Pontificio, etc):");
             ruta = pString.nextLine();
-            rep.setRuta(ruta);
             do {
                 System.out.println("Cual es el sueldo del empleado");
                 sueldo = s1.nextDouble();
-                rep.setSueldo(sueldo);
-            } while (rep.getSueldo() < 1000);
+            } while (sueldo < 1000);
             do {
                 System.out.println("Numero de empleado:");
                 numEmpleado = s1.nextLong();
-                rep.setNumEmpleado(numEmpleado);
-            } while (rep.getNumEmpleado() < 0);
+            } while (numEmpleado < 0);
+            Repartidor regRepartidor = new Repartidor(nombreEmpleado, numEmpleado, sueldo, ruta);
+            empleados.add(regRepartidor);
             System.out.println("\nDesea agregar a otro empleado (s/n):");
             opC = s1.next().charAt(0);
-            Repartidor regRepartidor = new Repartidor(rep);
-            empleados.add(regRepartidor);
         } while (opC == 's' || opC == 'S');
     }
 
     static public void registroE() {
         // Limpiar consola
         System.out.print("\033[H\033[2J");
-        Actualiza act = new Actualiza();
         do {
             System.out.println("Cual es el nombre del empleado:");
             nombreEmpleado = pNombres.nextLine();
-            act.setNombre(nombreEmpleado);
             System.out.println("De que es encargado (Calzado de hombre, mujer o niños)");
             encargado = pString.nextLine();
-            act.setEncargado(encargado);
             do {
                 System.out.println("Cual es el sueldo del empleado");
                 sueldo = s1.nextDouble();
-                act.setSueldo(sueldo);
-            } while (act.getSueldo() < 1000);
+            } while (sueldo < 1000);
             do {
                 System.out.println("Numero de empleado:");
                 numEmpleado = s1.nextLong();
-                act.setNumEmpleado(numEmpleado);
-            } while (act.getNumEmpleado() < 0);
+            } while (numEmpleado < 0);
+            Actualiza actualiza = new Actualiza(nombreEmpleado, numEmpleado, sueldo, encargado);
+            empleados.add(actualiza);
             System.out.println("\nDesea agregar a otro empleado (s/n):");
             opC = s1.next().charAt(0);
-            Actualiza regActualiza = new Actualiza(act);
-            empleados.add(regActualiza);
         } while (opC == 's' || opC == 'S');
     }
 
