@@ -36,15 +36,18 @@ public class Facebook extends Cuentas implements Interacciones {
 
     public void perfil() {
         System.out.println("\nPerfil de Facebook");
-        System.out.println("\nBienvenido " + this.getNombre());
-        System.out.println("\nEstas son sus publicaciones...");
+        System.out.println("Bienvenido " + this.getNombre());
+        System.out.println("Estas son sus publicaciones...");
     }
 
     public void iniciarSesion() {
-        String eMail, contrasenia;
-        System.out.println("E-mail");
+        String eMail, contrasenia, nombre;
+        System.out.println("Nombre de usuario");
+        nombre = cap.next();
+        this.setNombre(nombre);
+        System.out.println("\nE-mail");
         eMail = cap.next();
-        System.out.println("Contrasenia");
+        System.out.println("\nContrasenia");
         contrasenia = cap.next();
     }
 

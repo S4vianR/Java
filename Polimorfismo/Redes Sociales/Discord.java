@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Discord extends Cuentas {
+public class Discord extends Cuentas implements Interacciones{
     private final LocalDate FechaCrea;
     Scanner cap = new Scanner(System.in);
 
@@ -10,7 +10,7 @@ public class Discord extends Cuentas {
         this.FechaCrea = FechaCrea;
     }
 
-    public void crearCuenta(){
+    public void crearCuenta() {
         String eMail, contrasenia, nombre;
         LocalDate Fnac;
         System.out.println("\nE-mail");
@@ -35,15 +35,18 @@ public class Discord extends Cuentas {
 
     public void perfil() {
         System.out.println("\nPerfil de Discord");
-        System.out.println("\nBienvenido " + this.getNombre());
-        System.out.println("\nEstas son sus publicaciones...");
+        System.out.println("Bienvenido " + this.getNombre());
+        System.out.println("Estos son sus mensajes...");
     }
 
     public void iniciarSesion() {
-        String eMail, contrasenia;
-        System.out.println("E-mail");
+        String eMail, contrasenia, nombre;
+        System.out.println("Nombre de usuario");
+        nombre = cap.next();
+        this.setNombre(nombre);
+        System.out.println("\nE-mail");
         eMail = cap.next();
-        System.out.println("Contrasenia");
+        System.out.println("\nContrasenia");
         contrasenia = cap.next();
     }
 
