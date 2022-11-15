@@ -3,17 +3,19 @@ public abstract class Empleado {
     protected long numEmpleado;
     protected String nombre;
     protected double sueldo;
+    protected double bono;
 
     // Constructor normal
-    protected Empleado(String nombre, long numEmpleado, double sueldo) {
+    protected Empleado(String nombre, long numEmpleado, double sueldo, double bono) {
         this.nombre = nombre;
         this.numEmpleado = numEmpleado;
         this.sueldo = sueldo;
+        this.bono = bono;
     }
 
     // Metodos
     public double pago() {
-        return getSueldo();
+        return bono + getSueldo();
     }
 
     // Getters y setters
