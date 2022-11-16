@@ -2,26 +2,9 @@ public class Actualiza extends Empleado {
     // Atributos
     private String encargado;
 
-    // Constructor
-    public Actualiza() {
-        super();
-    }
-
     public Actualiza(String nombre, long numEmpleado, double sueldo, String encargado) {
-        super(nombre, numEmpleado, sueldo);
+        super(nombre, numEmpleado, sueldo, 500.00);
         this.encargado = encargado;
-    }
-
-    public Actualiza(Actualiza mientrasActualiza) {
-        super(mientrasActualiza.nombre, mientrasActualiza.numEmpleado, mientrasActualiza.sueldo);
-        this.encargado = mientrasActualiza.encargado;
-    }
-
-    // Metoodo
-    @Override
-    public double pago() {
-        double bono = 500.00;
-        return bono + getSueldo();
     }
 
     // Getters y setters

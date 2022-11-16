@@ -2,26 +2,9 @@ public class Sistemas extends Empleado {
     // Atributos
     private String puesto;
 
-    // Constructor
-    public Sistemas() {
-        super();
-    }
-
     public Sistemas(String nombre, long numEmpleado, double sueldo, String puesto) {
-        super(nombre, numEmpleado, sueldo);
+        super(nombre, numEmpleado, sueldo, 3000.00);
         this.puesto = puesto;
-    }
-
-    public Sistemas(Sistemas mientraSistemas) {
-        super(mientraSistemas.nombre,mientraSistemas.numEmpleado,mientraSistemas.sueldo);
-        this.puesto = mientraSistemas.puesto;
-    }
-
-    // Metoodo
-    @Override
-    public double pago() {
-        double bono = 3000.00;
-        return bono + getSueldo();
     }
 
     // Getters y setters
