@@ -29,6 +29,6 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombreUsuario + " - Telefono: " + numeroTelefono;
+        return "\nUsuario: " + nombreUsuario + " - Telefono: " + numeroTelefono;
     }
 }

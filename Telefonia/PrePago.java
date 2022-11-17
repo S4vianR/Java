@@ -1,20 +1,28 @@
-public class Plan extends Usuario implements MetodoPago {
+import java.time.LocalDate;
+
+public class PrePago extends Usuario implements MetodoPago {
     private String nombrePlan;
     private String beneficios;
     private Double costo;
     private Double cargoExtra;
+    private LocalDate fechaExpiracion;
 
-    public Plan(String nombreUsuario, String numeroTelefono, String nombrePlan, String beneficios, Double costo,
-            Double cargoExtra) {
+    public PrePago(String nombreUsuario, String numeroTelefono, String nombrePlan, String beneficios, Double costo,
+            Double cargoExtra, LocalDate fechaExpiracion) {
         super(nombreUsuario, numeroTelefono);
         this.nombrePlan = nombrePlan;
         this.beneficios = beneficios;
         this.costo = costo;
         this.cargoExtra = cargoExtra;
+        this.fechaExpiracion = fechaExpiracion;
     }
 
     @Override
     public Double pago() {
+        LocalDate.now();
+        if (fechaExpiracion.isEqual(LocalDate.now())) {
+            System.out.println("Hoy es el dia de vencimiento");
+        }
         return costo + cargoExtra;
     }
 
@@ -34,6 +42,10 @@ public class Plan extends Usuario implements MetodoPago {
         return cargoExtra;
     }
 
+    public LocalDate getFechaExpiracion() {
+        return fechaExpiracion;
+    }
+
     public void setNombrePlan(String nombrePlan) {
         this.nombrePlan = nombrePlan;
     }
@@ -50,9 +62,13 @@ public class Plan extends Usuario implements MetodoPago {
         this.cargoExtra = cargoExtra;
     }
 
+    public void setFechaExpiracion(LocalDate fechaExpiracion) {
+        this.fechaExpiracion = fechaExpiracion;
+    }
+
     @Override
     public String toString() {
         return super.toString() + "\nPlan: " + nombrePlan + "\nBeneficios: " + beneficios + "\nCosto: " + costo
-                + "\nCargo Extra: " + cargoExtra;
+                + "\nCargo Extra: " + cargoExtra + "\nFecha Expiracion: " + fechaExpiracion;
     }
 }
