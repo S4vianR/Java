@@ -1,7 +1,7 @@
-public class Deportivos extends Auto {
+public class Familiar extends Auto {
     /*
      * En una agencia de autos, se tiene catalogado 3 diferentes tipos de autos,
-     * trocas, familiares y deportivos
+     * trocas, Familiar y Deportivo
      * 
      * por lo que de deberá crear la clase base auto con los atributos>
      * 
@@ -13,44 +13,43 @@ public class Deportivos extends Auto {
      * y cada una de las clases derivadas tiene atributos específicos
      * 
      * las trocas tienen tamaño de la caja
-     * los deportivos tienen velocidad máxima
-     * los familiares números de asientos
+     * los Deportivo tienen velocidad máxima
+     * los Familiar números de asientos
      * 
      * y un método costo en ele que además de el precio se agrega un impuesto
      * diferente
      * 
      * trocas 10% impuesto
-     * deportivos 20% impuesto
-     * y familiares 5% impuesto
+     * Deportivo 20% impuesto
+     * y Familiar 5% impuesto
      * 
      * Realizar clase base y sus tres clases derivadas con sus atributos y el método
      * polimórfico costo
      * 
      * crear objetos en main y demostrar polimorfismo
      */
-    private double velocidadMaxima;
+    private int numAsientos;
 
-    public Deportivos(String marca, String modelo, String numserie, String color, double costo,
-            double velocidadMaxima) {
+    public Familiar(String marca, String modelo, String numserie, String color, double costo, int numAsientos) {
         super(marca, modelo, numserie, color, costo);
-        this.velocidadMaxima = velocidadMaxima;
+        this.numAsientos = numAsientos;
     }
 
     @Override
     public double costo() {
-        return costo + (costo * 0.20);
+        return costo + (costo * 0.05);
     }
 
-    public double getVelocidadMaxima() {
-        return velocidadMaxima;
+    public int getNumAsientos() {
+        return numAsientos;
     }
 
-    public void setVelocidadMaxima(double velocidadMaxima) {
-        this.velocidadMaxima = velocidadMaxima;
+    public void setNumAsientos(int numAsientos) {
+        this.numAsientos = numAsientos;
     }
 
     @Override
     public String toString() {
-        return "\nDeportivos" + super.toString() + "\nVelocidad maxima: " + velocidadMaxima;
+        return "\nFamiliar" + super.toString() + "\nNumero de asientos: " + numAsientos;
     }
 }

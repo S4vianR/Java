@@ -1,7 +1,7 @@
 public abstract class Auto {
     /*
      * En una agencia de autos, se tiene catalogado 3 diferentes tipos de autos,
-     * trocas, familiares y deportivos
+     * trocas, Familiar y Deportivo
      * 
      * por lo que de deberá crear la clase base auto con los atributos>
      * 
@@ -13,15 +13,15 @@ public abstract class Auto {
      * y cada una de las clases derivadas tiene atributos específicos
      * 
      * las trocas tienen tamaño de la caja
-     * los deportivos tienen velocidad máxima
-     * los familiares números de asientos
+     * los Deportivo tienen velocidad máxima
+     * los Familiar números de asientos
      * 
      * y un método costo en ele que además de el precio se agrega un impuesto
      * diferente
      * 
      * trocas 10% impuesto
-     * deportivos 20% impuesto
-     * y familiares 5% impuesto
+     * Deportivo 20% impuesto
+     * y Familiar 5% impuesto
      * 
      * Realizar clase base y sus tres clases derivadas con sus atributos y el método
      * polimórfico costo
