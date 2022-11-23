@@ -1,4 +1,4 @@
-public abstract class Auto {
+public class Auto {
     /*
      * En una agencia de autos, se tiene catalogado 3 diferentes tipos de autos,
      * trocas, Familiar y Deportivo
@@ -42,7 +42,9 @@ public abstract class Auto {
         this.costo = costo;
     }
 
-    public abstract double costo();
+    double costo() {
+        return 0.0;
+    }
 
     public String getMarca() {
         return marca;

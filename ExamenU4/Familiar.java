@@ -1,4 +1,4 @@
-public class Familiar extends Auto {
+public class Familiar extends Auto implements Cobro {
     /*
      * En una agencia de autos, se tiene catalogado 3 diferentes tipos de autos,
      * trocas, Familiar y Deportivo
