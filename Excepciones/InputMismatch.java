@@ -9,10 +9,8 @@ public class InputMismatch {
             num = s1.nextInt();
             System.out.println("El número es: " + num);
         } catch (java.util.InputMismatchException e) {
-            // System.out.println("Error: " + e.getMessage() + " " + e.getStackTrace());
             System.out.println("\nEl valor capturado no es un número entero");
-            System.out.println("El mensaje del error es: \n");
-            e.printStackTrace();
+            System.out.println("\nError: " + e.getMessage() + " " + e.getStackTrace());
         }
     }
 }
