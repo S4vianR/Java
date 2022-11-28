@@ -6,7 +6,7 @@ class ExcepcionEdades extends Exception {
 
 public class Edades {
     public static void main(String[] args) {
-        String edad = "20";
+        String edad = "12";
         try {
             int edadN = Integer.parseInt(edad);
             if (edadN < 18 || edadN > 40) {
