@@ -4,11 +4,12 @@ import java.util.Scanner;
 public class appINE {
     public static void main(String[] args) {
         Scanner s1 = new Scanner(System.in);
-        int numTarjeta, dia, mes, año;
-        String nombre;
+        Scanner s2 = new Scanner(System.in);
+        int numTarjeta = 0, dia = 0, mes = 0, año = 0;
+        String nombre = null;
         try {
             System.out.println("Ingrese el nombre del titular de la tarjeta");
-            nombre = s1.nextLine();
+            nombre = s2.nextLine();
             System.out.println("Ingrese el numero de la credencial");
             numTarjeta = s1.nextInt();
             System.out.println("Ingrese el dia de vencimiento");
@@ -18,12 +19,20 @@ public class appINE {
             validaM(mes);
             System.out.println("Ingrese el año de vencimiento");
             año = s1.nextInt();
-            INE tarjeta = new INE(numTarjeta, nombre, LocalDate.of(año, mes, dia));
-            System.out.println(tarjeta);
+            validaA(año);
         } catch (java.util.InputMismatchException e) {
             System.out.println("Error: " + e.getMessage());
         } catch (validaMes e) {
             System.out.println("Error: " + e.getMessage());
+            mes = 1;
+        } catch (validaAño e1) {
+            System.out.println("Error: " + e1.getMessage());
+            año = 2000;
+        } catch (Exception e2) {
+            System.out.println("Error: " + e2.getMessage());
+        } finally {
+            INE tarjeta = new INE(numTarjeta, nombre, LocalDate.of(año, mes, dia));
+            System.out.println(tarjeta);
         }
     }
 
@@ -33,9 +42,9 @@ public class appINE {
         }
     }
 
-    public static void validaa(int año) throws validaAño {
-        if (año < 2020) {
-            throw new validaAño("El año debe ser mayor o igual a 2020");
+    public static void validaA(int año) throws validaAño {
+        if (año < LocalDate.now().getYear()) {
+            throw new validaAño("El año debe ser mayor o igual a " + LocalDate.now().getYear());
         }
     }
 }
