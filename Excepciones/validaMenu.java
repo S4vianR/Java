@@ -32,6 +32,5 @@ public class validaMenu {
                 s1.nextLine();
             }
         } while (exit);
-
     }
 }
