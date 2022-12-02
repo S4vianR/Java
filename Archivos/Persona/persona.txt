@@ -1,0 +1,5 @@
+
+Persona
+Nombre: Juan
+Numero de telefono: 123456789
+Direccion: Calle 1
