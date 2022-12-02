@@ -87,6 +87,7 @@ public class Persona {
         FileWriter Archivo = null;
         PrintWriter pw = null;
         Persona P001 = new Persona("123456789", "Juan", "Calle 1");
+        // Persona P001 = new Persona(numTelefono, nombre, direccion);
         try {
             Archivo = new FileWriter("/home/reuben/Java/Archivos/Persona/persona.txt");
             pw = new PrintWriter(Archivo);
