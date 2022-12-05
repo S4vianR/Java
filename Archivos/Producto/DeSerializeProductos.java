@@ -1,9 +1,8 @@
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
-import java.io.Serializable;
 
-public class DeSerializeProductos implements Serializable{
+public class DeSerializeProductos {
     DeSerializeProductos() {
         Producto p = null;
         try {
